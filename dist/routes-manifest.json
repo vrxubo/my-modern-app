@@ -1,0 +1,63 @@
+{
+  "routeAssets": {
+    "main": {
+      "chunkIds": [
+        691,
+        740,
+        594,
+        98,
+        773,
+        792
+      ],
+      "assets": [
+        "/static/js/lib-polyfill.f6055994.js",
+        "/static/js/lib-react.fe91f920.js",
+        "/static/js/lib-router.2d3e1fa1.js",
+        "/static/js/773.197c8875.js",
+        "/static/css/main.d943a98c.css",
+        "/static/js/main.8b84d124.js"
+      ],
+      "referenceCssAssets": [
+        "/static/css/main.d943a98c.css"
+      ]
+    },
+    "camera/page": {
+      "chunkIds": [
+        128
+      ],
+      "assets": [
+        "/static/js/async/camera/page.786208dc.js"
+      ],
+      "referenceCssAssets": []
+    },
+    "page": {
+      "chunkIds": [
+        530
+      ],
+      "assets": [
+        "/static/js/async/page.5c482b55.js"
+      ],
+      "referenceCssAssets": []
+    },
+    "schulte/page": {
+      "chunkIds": [
+        134,
+        469
+      ],
+      "assets": [
+        "/static/js/async/134.e4d21115.js",
+        "/static/js/async/schulte/page.33885ac2.js"
+      ],
+      "referenceCssAssets": []
+    },
+    "tailwind/page": {
+      "chunkIds": [
+        839
+      ],
+      "assets": [
+        "/static/js/async/tailwind/page.280aa71d.js"
+      ],
+      "referenceCssAssets": []
+    }
+  }
+}

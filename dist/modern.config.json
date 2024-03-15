@@ -1,0 +1,186 @@
+{
+  "autoLoadPlugins": false,
+  "runtime": {
+    "router": true
+  },
+  "runtimeByEntries": {},
+  "source": {
+    "alias": {
+      "styled-components": "/Users/xubo/work/fe/github/my-modern-app/node_modules/.pnpm/styled-components@5.3.11_@babel+core@7.24.0_react-dom@18.2.0_react-is@18.2.0_react@18.2.0/node_modules/styled-components/dist/styled-components.cjs.js",
+      "@modern-js/runtime/plugins": "/Users/xubo/work/fe/github/my-modern-app/node_modules/.modern-js/.runtime-exports/plugins.js",
+      "@_modern_js_internal": "/Users/xubo/work/fe/github/my-modern-app/node_modules/.modern-js",
+      "@_modern_js_src": "/Users/xubo/work/fe/github/my-modern-app/src",
+      "@": "/Users/xubo/work/fe/github/my-modern-app/src",
+      "@shared": "/Users/xubo/work/fe/github/my-modern-app/shared",
+      "@modern-js/runtime-utils/node$": "/Users/xubo/work/fe/github/my-modern-app/node_modules/.pnpm/@modern-js+runtime-utils@2.48.0_react-dom@18.2.0_react@18.2.0/node_modules/@modern-js/runtime-utils/dist/cjs/node/index.js",
+      "@modern-js/runtime/testing/bff": "/Users/xubo/work/fe/github/my-modern-app/node_modules/.pnpm/@modern-js+plugin-testing@2.48.0_@modern-js+runtime@2.48.0_@types+node@16.11.7_react-dom@18.2_zxzc563qrhsir2jgcujmxjgf3m/node_modules/@modern-js/plugin-testing/dist/cjs/runtime-testing/bff.js",
+      "@modern-js/runtime/testing": "/Users/xubo/work/fe/github/my-modern-app/node_modules/.modern-js/.runtime-exports/testing.js"
+    },
+    "globalVars": [
+      {
+        "process.env.IS_REACT18": "true",
+        "process.env.MODERN_JS_VERSION": "2.48.0"
+      },
+      null
+    ],
+    "mainEntryName": "main",
+    "enableAsyncEntry": false,
+    "disableDefaultEntries": false,
+    "entriesDir": "./src",
+    "configDir": "./config",
+    "include": [
+      {},
+      {},
+      {},
+      "/Users/xubo/work/fe/github/my-modern-app/node_modules/.modern-js"
+    ]
+  },
+  "tools": {
+    "styledComponents": {
+      "topLevelImportPaths": [
+        "@modern-js/runtime/styled"
+      ]
+    }
+  },
+  "output": {
+    "distPath": {
+      "root": "dist",
+      "html": "html",
+      "js": "static/js",
+      "css": "static/css",
+      "server": "bundles",
+      "worker": "worker"
+    },
+    "cleanDistPath": true,
+    "disableNodePolyfill": true,
+    "enableInlineRouteManifests": true,
+    "disableInlineRouteManifests": false
+  },
+  "server": {
+    "baseUrl": "/",
+    "port": 8080
+  },
+  "dev": {},
+  "html": {
+    "title": "",
+    "mountId": "root",
+    "meta": {
+      "charset": {
+        "charset": "utf-8"
+      },
+      "viewport": "width=device-width, initial-scale=1.0, shrink-to-fit=no, viewport-fit=cover, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no",
+      "http-equiv": {
+        "http-equiv": "x-ua-compatible",
+        "content": "ie=edge"
+      },
+      "renderer": "webkit",
+      "layoutmode": "standard",
+      "imagemode": "force",
+      "wap-font-scale": "no",
+      "format-detection": "telephone=no"
+    }
+  },
+  "plugins": [
+    {
+      "name": "@modern-js/app-tools",
+      "post": [
+        "@modern-js/plugin-initialize",
+        "@modern-js/plugin-analyze",
+        "@modern-js/plugin-ssr",
+        "@modern-js/plugin-document",
+        "@modern-js/plugin-state",
+        "@modern-js/plugin-router",
+        "@modern-js/plugin-router-v5",
+        "@modern-js/plugin-polyfill"
+      ],
+      "registerHook": {
+        "modifyEntryExport": {},
+        "modifyEntryImports": {},
+        "modifyEntryRuntimePlugins": {},
+        "modifyEntryRenderFunction": {},
+        "modifyAsyncEntry": {},
+        "modifyFileSystemRoutes": {},
+        "modifyServerRoutes": {},
+        "htmlPartials": {},
+        "beforeGenerateRoutes": {},
+        "addDefineTypes": {},
+        "collectServerPlugins": {},
+        "beforeDev": {},
+        "afterDev": {},
+        "beforeCreateCompiler": {},
+        "afterCreateCompiler": {},
+        "beforePrintInstructions": {},
+        "beforeBuild": {},
+        "afterBuild": {},
+        "beforeDeploy": {},
+        "afterDeploy": {},
+        "beforeRestart": {},
+        "registerDev": {},
+        "beforeDevTask": {},
+        "registerBuildPlatform": {},
+        "beforeBuildPlatform": {}
+      },
+      "usePlugins": [
+        {
+          "name": "@modern-js/plugin-initialize",
+          "post": [
+            "@modern-js/plugin-ssr",
+            "@modern-js/plugin-document",
+            "@modern-js/plugin-state",
+            "@modern-js/plugin-router",
+            "@modern-js/plugin-router-v5",
+            "@modern-js/plugin-polyfill"
+          ]
+        },
+        {
+          "name": "@modern-js/plugin-analyze"
+        },
+        {
+          "name": "@modern-js/server-build"
+        },
+        {
+          "name": "@modern-js/plugin-lint"
+        }
+      ]
+    },
+    {
+      "name": "@modern-js/plugin-tailwindcss",
+      "usePlugins": [
+        {
+          "name": "@modern-js/plugin-design-token"
+        }
+      ]
+    },
+    {
+      "name": "@modern-js/plugin-testing",
+      "usePlugins": [
+        {
+          "name": "@modern-js/testing-plugin-bff"
+        }
+      ],
+      "post": [
+        "@modern-js/testing-plugin-bff"
+      ],
+      "registerHook": {
+        "jestConfig": {},
+        "afterTest": {}
+      }
+    }
+  ],
+  "builderPlugins": [],
+  "_raw": {
+    "runtime": {
+      "router": true
+    },
+    "plugins": [
+      "[Circular 0]",
+      "[Circular 1]",
+      "[Circular 2]"
+    ]
+  },
+  "bff": {},
+  "testing": {},
+  "deploy": {},
+  "performance": {},
+  "security": {}
+}
