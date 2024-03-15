@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>详细信息</title>
+    <script src="https://unpkg.com/react/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+    <!-- 在这里添加Google字体链接 -->
+</head>
+<body>
+    <div id="app"></div>
+    <script type="text/babel">
+        const ConfirmationCard = () => {
+            return (
+                <div className="bg-white rounded-lg p-6 m-8">
+                    <div className="flex justify-end mb-4">
+                        <button className="text-gray-400 hover:text-gray-600">
+                            <i className="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <h2 className="text-2xl font-semibold text-center mb-6">详细信息</h2>
+                    <div className="text-lg mb-6">
+                        <div className="mb-2">充值商品: <span className="font-semibold">流量定额包</span></div>
+                        <div className="mb-2">类别: <span className="font-semibold">超大</span></div>
+                        <div className="mb-2">卡号: <span className="font-semibold">超大卡号1111</span></div>
+                        <div className="mb-4">密码: <span className="font-semibold">超大密码1111</span></div>
+                        <div className="text-center mb-4">
+                            <span className="text-sm">验证码:</span>
+                            <span className="text-3xl font-semibold"> 666666</span>
+                        </div>
+                    </div>
+                    <div className="flex justify-center items-center gap-4">
+                        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded">
+                            确定充值
+                        </button>
+                        <button className="text-gray-500 hover:text-gray-700 underline">
+                            查看充值教程/信息
+                        </button>
+                    </div>
+                </div>
+            );
+        };
+
+        ReactDOM.render(<ConfirmationCard />, document.getElementById('app'));
+    </script>
+</body>
+</html>
