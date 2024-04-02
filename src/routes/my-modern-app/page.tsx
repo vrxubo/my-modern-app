@@ -150,8 +150,8 @@ function Camera() {
       audio: false,
       video: {
         facingMode: cameraExact,
-        width: { min: 1, ideal: Math.floor(width / 3), max: width },
-        height: { min: 1, ideal: Math.floor(height / 3), max: height },
+        width: { min: 1, ideal: height, max: height },
+        height: { min: 1, ideal: width, max: width },
       },
     };
     navigator.mediaDevices
