@@ -13,7 +13,7 @@
         "/my-modern-app/static/js/lib-polyfill.f6055994.js",
         "/my-modern-app/static/js/lib-react.fe91f920.js",
         "/my-modern-app/static/js/lib-router.2d3e1fa1.js",
-        "/my-modern-app/static/js/280.72394f07.js",
+        "/my-modern-app/static/js/280.4995f8b1.js",
         "/my-modern-app/static/css/index.d943a98c.css",
         "/my-modern-app/static/js/index.29b73e52.js"
       ],
@@ -21,12 +21,12 @@
         "/my-modern-app/static/css/index.d943a98c.css"
       ]
     },
-    "camera/page": {
+    "my-modern-app/page": {
       "chunkIds": [
-        128
+        85
       ],
       "assets": [
-        "/my-modern-app/static/js/async/camera/page.786208dc.js"
+        "/my-modern-app/static/js/async/my-modern-app/page.73460884.js"
       ],
       "referenceCssAssets": []
     },
