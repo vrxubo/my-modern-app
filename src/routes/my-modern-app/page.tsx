@@ -167,6 +167,10 @@ function Camera() {
           console.log('Constraints', videoTrack.getConstraints());
           console.log('Capabilities', videoTrack.getCapabilities());
           console.log('Settings', videoTrack.getSettings());
+          console.log(
+            'support',
+            navigator.mediaDevices.getSupportedConstraints(),
+          );
 
           setState({
             isUse: true,
