@@ -7,6 +7,11 @@ export default defineConfig({
   runtime: {
     router: true,
   },
+  output: {
+    distPath: {
+      root: 'docs',
+    },
+  },
   plugins: [
     appTools({
       bundler: 'webpack', // Set to 'experimental-rspack' to enable rspack ⚡️🦀
