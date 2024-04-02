@@ -1,24 +1,24 @@
 {
   "routeAssets": {
-    "main": {
+    "index": {
       "chunkIds": [
         691,
         740,
         594,
         98,
-        773,
-        792
+        280,
+        57
       ],
       "assets": [
-        "/static/js/lib-polyfill.f6055994.js",
-        "/static/js/lib-react.fe91f920.js",
-        "/static/js/lib-router.2d3e1fa1.js",
-        "/static/js/773.197c8875.js",
-        "/static/css/main.d943a98c.css",
-        "/static/js/main.8b84d124.js"
+        "/my-modern-app/static/js/lib-polyfill.f6055994.js",
+        "/my-modern-app/static/js/lib-react.fe91f920.js",
+        "/my-modern-app/static/js/lib-router.2d3e1fa1.js",
+        "/my-modern-app/static/js/280.72394f07.js",
+        "/my-modern-app/static/css/index.d943a98c.css",
+        "/my-modern-app/static/js/index.29b73e52.js"
       ],
       "referenceCssAssets": [
-        "/static/css/main.d943a98c.css"
+        "/my-modern-app/static/css/index.d943a98c.css"
       ]
     },
     "camera/page": {
@@ -26,7 +26,7 @@
         128
       ],
       "assets": [
-        "/static/js/async/camera/page.786208dc.js"
+        "/my-modern-app/static/js/async/camera/page.786208dc.js"
       ],
       "referenceCssAssets": []
     },
@@ -35,7 +35,7 @@
         530
       ],
       "assets": [
-        "/static/js/async/page.5c482b55.js"
+        "/my-modern-app/static/js/async/page.5c482b55.js"
       ],
       "referenceCssAssets": []
     },
@@ -45,8 +45,8 @@
         469
       ],
       "assets": [
-        "/static/js/async/134.e4d21115.js",
-        "/static/js/async/schulte/page.33885ac2.js"
+        "/my-modern-app/static/js/async/134.e4d21115.js",
+        "/my-modern-app/static/js/async/schulte/page.33885ac2.js"
       ],
       "referenceCssAssets": []
     },
@@ -55,7 +55,7 @@
         839
       ],
       "assets": [
-        "/static/js/async/tailwind/page.280aa71d.js"
+        "/my-modern-app/static/js/async/tailwind/page.280aa71d.js"
       ],
       "referenceCssAssets": []
     }

@@ -7,9 +7,17 @@ export default defineConfig({
   runtime: {
     router: true,
   },
+  source: {
+    mainEntryName: 'index',
+  },
+  html: {
+    disableHtmlFolder: true,
+  },
   output: {
+    assetPrefix: '/my-modern-app',
     distPath: {
       root: 'docs',
+      html: '',
     },
   },
   plugins: [

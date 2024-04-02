@@ -23,7 +23,7 @@
       },
       null
     ],
-    "mainEntryName": "main",
+    "mainEntryName": "index",
     "enableAsyncEntry": false,
     "disableDefaultEntries": false,
     "entriesDir": "./src",
@@ -45,7 +45,7 @@
   "output": {
     "distPath": {
       "root": "docs",
-      "html": "html",
+      "html": "",
       "js": "static/js",
       "css": "static/css",
       "server": "bundles",
@@ -54,7 +54,8 @@
     "cleanDistPath": true,
     "disableNodePolyfill": true,
     "enableInlineRouteManifests": true,
-    "disableInlineRouteManifests": false
+    "disableInlineRouteManifests": false,
+    "assetPrefix": "/my-modern-app"
   },
   "server": {
     "baseUrl": "/",
@@ -78,7 +79,8 @@
       "imagemode": "force",
       "wap-font-scale": "no",
       "format-detection": "telephone=no"
-    }
+    },
+    "disableHtmlFolder": true
   },
   "plugins": [
     {
@@ -172,9 +174,17 @@
     "runtime": {
       "router": true
     },
+    "source": {
+      "mainEntryName": "index"
+    },
+    "html": {
+      "disableHtmlFolder": true
+    },
     "output": {
+      "assetPrefix": "/my-modern-app",
       "distPath": {
-        "root": "docs"
+        "root": "docs",
+        "html": ""
       }
     },
     "plugins": [
