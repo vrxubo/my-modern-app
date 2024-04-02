@@ -23,7 +23,8 @@
   },
   "eslintIgnore": [
     "node_modules/",
-    "dist/"
+    "dist/",
+    "docs"
   ],
   "dependencies": {
     "@modern-js/plugin-tailwindcss": "2.48.0",
