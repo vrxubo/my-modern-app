@@ -6,19 +6,19 @@
         740,
         594,
         98,
-        280,
+        89,
         57
       ],
       "assets": [
         "/my-modern-app/static/js/lib-polyfill.f6055994.js",
         "/my-modern-app/static/js/lib-react.fe91f920.js",
         "/my-modern-app/static/js/lib-router.2d3e1fa1.js",
-        "/my-modern-app/static/js/280.4995f8b1.js",
-        "/my-modern-app/static/css/index.d943a98c.css",
-        "/my-modern-app/static/js/index.29b73e52.js"
+        "/my-modern-app/static/js/89.242624f7.js",
+        "/my-modern-app/static/css/index.1b35089d.css",
+        "/my-modern-app/static/js/index.de9ff31b.js"
       ],
       "referenceCssAssets": [
-        "/my-modern-app/static/css/index.d943a98c.css"
+        "/my-modern-app/static/css/index.1b35089d.css"
       ]
     },
     "my-modern-app/page": {
@@ -26,27 +26,35 @@
         85
       ],
       "assets": [
-        "/my-modern-app/static/js/async/my-modern-app/page.73460884.js"
+        "/my-modern-app/static/js/async/my-modern-app/page.9129fa5b.js"
       ],
       "referenceCssAssets": []
     },
     "page": {
       "chunkIds": [
+        740,
+        441,
         530
       ],
       "assets": [
-        "/my-modern-app/static/js/async/page.5c482b55.js"
+        "/my-modern-app/static/js/lib-polyfill.f6055994.js",
+        "/my-modern-app/static/js/async/441.3fc6e467.js",
+        "/my-modern-app/static/js/async/page.bcfa86e4.js"
       ],
       "referenceCssAssets": []
     },
     "schulte/page": {
       "chunkIds": [
-        134,
+        740,
+        441,
+        789,
         469
       ],
       "assets": [
-        "/my-modern-app/static/js/async/134.e4d21115.js",
-        "/my-modern-app/static/js/async/schulte/page.33885ac2.js"
+        "/my-modern-app/static/js/lib-polyfill.f6055994.js",
+        "/my-modern-app/static/js/async/441.3fc6e467.js",
+        "/my-modern-app/static/js/async/789.d95bd0fc.js",
+        "/my-modern-app/static/js/async/schulte/page.ad0a4f7e.js"
       ],
       "referenceCssAssets": []
     },

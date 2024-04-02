@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react';
-import { Alert } from '@/components/ui/alert';
 
 async function getImg(path: string): Promise<HTMLImageElement> {
   return new Promise((resolve, reject) => {
@@ -21,7 +20,6 @@ function transtion(num: number) {
 type CameraType = 'user' | 'environment';
 type StateType = {
   isUse?: boolean;
-
   // 闪光灯
   track?: MediaStreamTrack | null;
   isUseTorch?: boolean;
@@ -56,7 +54,7 @@ function Camera() {
     isUseTorch: false,
     trackStatus: false,
   });
-  const [imgUrl, setImgUrl] = useState<string>('');
+  const [, setImgUrl] = useState<string>('');
   const videoRef = useRef<HTMLVideoElement>(null);
   const canvasBox = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -64,7 +62,7 @@ function Camera() {
   const canvas2dRef = useRef<CanvasRenderingContext2D | null>(null);
   const cameraCanvas2dRef = useRef<CanvasRenderingContext2D | null>(null);
 
-  const [cameraExact, setCameraExact] = useState<CameraType>('environment');
+  const [, setCameraExact] = useState<CameraType>('environment');
 
   const handleShutter = () => {
     cameraCanvas2dRef.current?.drawImage(
@@ -131,7 +129,7 @@ function Camera() {
       }
     }
   };
-  const openScan = () => {
+  const openScan = async () => {
     const width = transtion(
       document.documentElement.clientWidth || document.body.clientWidth,
     );
@@ -139,11 +137,19 @@ function Camera() {
       document.documentElement.clientHeight || document.body.clientHeight,
     );
 
+    const devices = await navigator.mediaDevices.enumerateDevices();
+    const videoDevices = devices.filter(device => device.kind === 'videoinput');
+    if (videoDevices.length === 0) {
+      console.error('设备不支持');
+      return;
+    }
+
     const videoParam = {
       audio: false,
       video: {
+        diviceId: videoDevices[0].deviceId,
         aspectRatio: width / height,
-        facingMode: cameraExact,
+        // facingMode: cameraExact,
         width,
         height,
       },
@@ -211,10 +217,7 @@ function Camera() {
         <div className="trach-box" onClick={handleTrach}>
           trach
         </div>
-        {imgUrl && (
-          <img className="fixed top-0 left-0 z-20" src={imgUrl} alt="" />
-        )}
-        <div className="fixed bottom-0 left-0 w-screen flex items-center justify-center bg-transparent z-40">
+        <div className="fixed bottom-0 left-0 w-full flex items-center justify-center bg-transparent z-40">
           <a
             className="flex items-center justify-center w-8 h-8 rounded-full bg-slate-900 text-white"
             onClick={handleShutter}
@@ -222,26 +225,18 @@ function Camera() {
             拍
           </a>
         </div>
-        <video ref={videoRef} className="w-screen h-screen" />
+        <video ref={videoRef} className="h-full w-full fixed left-0 top-0" />
         <canvas
           ref={canvasRef}
           id="canvas"
-          className="w-screen h-screen fixed left-0 top-0"
+          className="h-full w-full fixed left-0 top-0"
         />
         <canvas
           ref={cameraCanvasRef}
           id="camera-canvas"
-          className="w-screen h-full hidden"
+          className="h-full w-full fixed left-0 top-0 hidden"
         />
       </div>
-      <Alert>
-        <dl>
-          <dt>相机权限被拒绝，请尝试如下操作：</dt>
-          <dd>刷新页面后重试；</dd>
-          <dd>在系统中检测当前App或浏览器的相机权限是否被禁用；</dd>
-          <dd>如果依然不能体验，建议在微信中打开链接；</dd>
-        </dl>
-      </Alert>
     </div>
   );
 }
