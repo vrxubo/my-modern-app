@@ -62,7 +62,7 @@ function Camera() {
   const canvas2dRef = useRef<CanvasRenderingContext2D | null>(null);
   const cameraCanvas2dRef = useRef<CanvasRenderingContext2D | null>(null);
 
-  const [, setCameraExact] = useState<CameraType>('environment');
+  const [cameraExact, setCameraExact] = useState<CameraType>('environment');
 
   const handleShutter = () => {
     cameraCanvas2dRef.current?.drawImage(
@@ -144,14 +144,14 @@ function Camera() {
       return;
     }
 
+    console.log('videoDevices', videoDevices);
+
     const videoParam = {
       audio: false,
       video: {
-        diviceId: videoDevices[0].deviceId,
-        aspectRatio: width / height,
-        // facingMode: cameraExact,
-        width,
-        height,
+        facingMode: cameraExact,
+        width: { min: 1, ideal: Math.floor(width / 3), max: width },
+        height: { min: 1, ideal: Math.floor(height / 3), max: height },
       },
     };
     navigator.mediaDevices
